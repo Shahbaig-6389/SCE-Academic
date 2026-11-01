@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCE-ACADEMY | Premier Offline Tech Training & Pearson VUE Center in Tumkur</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0284c7',
+                            600: '#0369a1',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                            teal: '#0d9488',
+                            accent: '#f59e0b'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-gradient-to-r from-brand-900 via-brand-800 to-brand-teal text-white py-2 text-xs md:text-sm">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center flex-wrap gap-2">
+            <div class="flex items-center space-x-4">
+                <span><i class="fa-solid fa-location-dot text-brand-accent mr-1.5"></i> Sapthagiri Complex, Shantinagar, NH-4 Highway, Tumkur - 572106</span>
+                <span class="hidden sm:inline"><i class="fa-solid fa-phone text-brand-accent mr-1.5"></i> +91 98765 43210</span>
+            </div>
+            <div class="flex items-center space-x-3 text-xs">
+                <span class="bg-brand-accent/20 text-brand-accent border border-brand-accent/30 px-2 py-0.5 rounded-full font-medium"><i class="fa-solid fa-award mr-1"></i> Authorized Pearson VUE Test Center</span>
+                <a href="#inquiry" class="hover:underline text-slate-200">Book Free Demo Session &rarr;</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Brand Logo -->
+                <a href="#" class="flex items-center space-x-3 group">
+                    <div class="w-11 h-11 bg-gradient-to-tr from-brand-900 to-brand-500 rounded-xl flex items-center justify-center text-white shadow-md shadow-brand-500/20 group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-graduation-cap text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="text-xl font-extrabold tracking-tight text-slate-900 block leading-none">SCE-<span class="text-brand-500">ACADEMY</span></span>
+                        <span class="text-xs font-semibold text-brand-teal tracking-wider uppercase">Tumkur Offline Tech & VUE Hub</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav Navigation -->
+                <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+                    <a href="#about" class="hover:text-brand-600 transition-colors">About Academy</a>
+                    <a href="#vue-center" class="hover:text-brand-600 transition-colors">VUE Testing Center</a>
+                    <a href="#faculty" class="hover:text-brand-600 transition-colors">Expert Faculty</a>
+                    <a href="#courses" class="hover:text-brand-600 transition-colors">Courses & Training</a>
+                    <a href="#features" class="hover:text-brand-600 transition-colors">Classroom Lab</a>
+                    <a href="#faq" class="hover:text-brand-600 transition-colors">FAQs</a>
+                </nav>
+
+                <!-- Action Button & Mobile Menu Toggle -->
+                <div class="flex items-center space-x-4">
+                    <button onclick="openModal('enrollModal')" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold text-white bg-brand-600 hover:bg-brand-700 rounded-xl shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5">
+                        <i class="fa-solid fa-graduation-cap mr-2"></i> Enroll Now
+                    </button>
+                    <button id="mobileMenuBtn" class="md:hidden text-slate-700 p-2 focus:outline-none" aria-label="Toggle Navigation">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobileMenu" class="hidden md:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-6 space-y-3 shadow-lg">
+            <a href="#about" class="block py-2 text-base font-medium text-slate-700 hover:text-brand-600">About Academy</a>
+            <a href="#courses" class="block py-2 text-base font-medium text-slate-700 hover:text-brand-600">Courses & Training</a>
+            <a href="#vendors" class="block py-2 text-base font-medium text-slate-700 hover:text-brand-600">Industry Certifications</a>
+            <a href="#features" class="block py-2 text-base font-medium text-slate-700 hover:text-brand-600">Classroom Features</a>
+            <a href="#faq" class="block py-2 text-base font-medium text-slate-700 hover:text-brand-600">FAQs</a>
+            <button onclick="openModal('enrollModal')" class="w-full text-center mt-2 px-5 py-3 font-semibold text-white bg-brand-600 rounded-xl shadow-md">
+                Enroll Now / Book Demo
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-b from-slate-900 via-brand-900 to-slate-900 text-white overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-32">
+        <!-- Background Grid Graphic -->
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#38bdf8_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center space-x-2 bg-brand-500/10 border border-brand-500/30 text-brand-100 px-4 py-1.5 rounded-full text-xs sm:text-sm font-medium backdrop-blur-md">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                        <span>Tumkur's premier offline tech learning center</span>
+                    </div>
+                    
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                        Master Practical Tech Skills <span class="bg-gradient-to-r from-sky-400 via-teal-300 to-amber-300 bg-clip-text text transparent">Offline at SCE-ACADEMY</span>
+                    </h1>
+                    
+                    <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                        Transform your career in Tumkur with seasoned mentors holding advanced teaching careers. Master AI, Cybersecurity, Digital Marketing, and take global certification exams at our Authorized Pearson VUE Test Center.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#courses" class="w-full sm:w-auto px-8 py-4 bg-brand-500 hover:bg-brand-600 text-white font-bold rounded-xl shadow-lg shadow-brand-500/30 hover:shadow-brand-500/50 transition-all text-center">
+                            Explore Courses &rarr;
+                        </a>
+                        <button onclick="openModal('enrollModal')" class="w-full sm:w-auto px-8 py-4 bg-slate-800 hover:bg-slate-700 text-slate-100 border border-slate-700 font-semibold rounded-xl transition-all text-center">
+                            <i class="fa-solid fa-calendar-check mr-2 text-brand-accent"></i> Book Free Offline Trial
+                        </button>
+                    </div>
+
+                    <!-- Trust Stats -->
+                    <div class="grid grid-cols-3 gap-4 pt-8 border-t border-slate-800 text-center lg:text-left">
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-extrabold text-white">Pearson VUE</div>
+                            <div class="text-xs sm:text-sm text-slate-400">Authorized Test Center</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-extrabold text-white">12+ Yrs</div>
+                            <div class="text-xs sm:text-sm text-slate-400">Avg Faculty Experience</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-extrabold text-white">4,500+</div>
+                            <div class="text-xs sm:text-sm text-slate-400">Trained Graduates</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Image & Lab Preview Card -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none rounded-2xl overflow-hidden shadow-2xl border border-slate-700/50 bg-slate-800">
+                        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80" alt="Students training in computer classroom lab" class="w-full h-80 sm:h-96 object-cover filter brightness-90">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
+                        
+                        <!-- Floating Badge -->
+                        <div class="absolute bottom-4 left-4 right-4 glass-card p-4 rounded-xl text-slate-900 flex items-center justify-between">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 rounded-lg bg-teal-100 text-brand-teal flex items-center justify-center font-bold">
+                                    <i class="fa-solid fa-chalkboard-user text-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-sm">Face-to-Face Mentorship</h4>
+                                    <p class="text-xs text-slate-500">Dedicated Tumkur Campus Instructors</p>
+                                </div>
+                            </div>
+                            <span class="text-xs bg-emerald-100 text-emerald-800 font-semibold px-2.5 py-1 rounded-md">Live Labs</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners / Vendor Certification Strip -->
+    <section id="vendors" class="py-8 bg-white border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-center text-xs font-bold uppercase tracking-wider text-slate-400 mb-6">Official Pearson VUE Exam Center & Industry Certification Prep</p>
+            <div class="flex flex-wrap items-center justify-center gap-8 md:gap-12 opacity-80 grayscale hover:grayscale-0 transition-all duration-300">
+                <div class="flex items-center space-x-2 text-slate-700 font-bold text-lg"><i class="fa-solid fa-shield-cat text-brand-500 text-2xl"></i> <span>Pearson VUE</span></div>
+                <div class="flex items-center space-x-2 text-slate-700 font-bold text-lg"><i class="fa-brands fa-google text-red-500 text-2xl"></i> <span>Google</span></div>
+                <div class="flex items-center space-x-2 text-slate-700 font-bold text-lg"><i class="fa-brands fa-microsoft text-blue-500 text-2xl"></i> <span>Microsoft</span></div>
+                <div class="flex items-center space-x-2 text-slate-700 font-bold text-lg"><i class="fa-solid fa-building text-blue-700 text-2xl"></i> <span>IBM Tech</span></div>
+                <div class="flex items-center space-x-2 text-slate-700 font-bold text-lg"><i class="fa-solid fa-network-wired text-cyan-600 text-2xl"></i> <span>Cisco Networking</span></div>
+                <div class="flex items-center space-x-2 text-slate-700 font-bold text-lg"><i class="fa-solid fa-paint-brush text-red-600 text-2xl"></i> <span>Adobe Creative</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: Pearson VUE Online Exam Center Feature -->
+    <section id="vue-center" class="py-16 bg-gradient-to-r from-brand-900 to-slate-900 text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="bg-white/10 backdrop-blur-lg border border-white/20 p-8 sm:p-12 rounded-3xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-8 space-y-4">
+                    <span class="bg-amber-400 text-slate-900 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full inline-block">Official Facility</span>
+                    <h2 class="text-2xl sm:text-4xl font-extrabold">Authorized Pearson VUE Online Testing Center</h2>
+                    <p class="text-slate-200 text-sm sm:text-base leading-relaxed">
+                        No need to travel to Bangalore for global tech certification exams! **SCE-ACADEMY Tumkur** is a certified Pearson VUE testing location equipped with proctored surveillance, secure networks, and dedicated exam terminals for Microsoft, Cisco, AWS, CompTIA, Oracle, and Google certifications.
+                    </p>
+                    <div class="flex flex-wrap gap-4 text-xs font-semibold pt-2">
+                        <span class="bg-white/20 px-3 py-1.5 rounded-lg border border-white/10"><i class="fa-solid fa-check text-emerald-400 mr-1.5"></i> Biometric Verification</span>
+                        <span class="bg-white/20 px-3 py-1.5 rounded-lg border border-white/10"><i class="fa-solid fa-check text-emerald-400 mr-1.5"></i> Secure High-Speed Proctored Labs</span>
+                        <span class="bg-white/20 px-3 py-1.5 rounded-lg border border-white/10"><i class="fa-solid fa-check text-emerald-400 mr-1.5"></i> Same-Day Score Reports</span>
+                    </div>
+                </div>
+                <div class="lg:col-span-4 text-center">
+                    <div class="bg-white text-slate-900 p-6 rounded-2xl shadow-xl space-y-3">
+                        <i class="fa-solid fa-file-signature text-4xl text-brand-600"></i>
+                        <h3 class="font-extrabold text-lg">Book Your Exam Slot</h3>
+                        <p class="text-xs text-slate-500">Select SCE-ACADEMY Tumkur as your test center on Pearson VUE portal or book via our desk.</p>
+                        <button onclick="openModal('enrollModal')" class="w-full py-2.5 bg-brand-600 hover:bg-brand-700 text-white rounded-xl font-bold text-xs uppercase tracking-wider">
+                            Inquire Exam Slots
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-16 md:py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <div class="inline-block bg-brand-100 text-brand-800 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">
+                        Why Choose Offline Learning At SCE-ACADEMY?
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight">
+                        Real Classrooms. Real Guidance. Real Practical Experience.
+                    </h2>
+                    <p class="text-slate-600 leading-relaxed">
+                        At **SCE-ACADEMY Tumkur**, we believe computer skills cannot be mastered through online video lectures alone. Our state-of-the-art physical campus at Sapthagiri Complex, Shantinagar offers direct interaction with expert trainers, instant error resolution, high-end computer workstations, and collaborative group learning.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-sm shrink-0">✓</div>
+                            <div>
+                                <h4 class="font-bold text-sm text-slate-900">100% Practical Labs</h4>
+                                <p class="text-xs text-slate-500">Individual computer workstations for every student.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-sm shrink-0">✓</div>
+                            <div>
+                                <h4 class="font-bold text-sm text-slate-900">1-on-1 Doubt Clearing</h4>
+                                <p class="text-xs text-slate-500">Dedicated mentors available in class.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-sm shrink-0">✓</div>
+                            <div>
+                                <h4 class="font-bold text-sm text-slate-900">Authorized Exam Hub</h4>
+                                <p class="text-xs text-slate-500">Official Pearson VUE testing center on-site.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-sm shrink-0">✓</div>
+                            <div>
+                                <h4 class="font-bold text-sm text-slate-900">Job Placement Guidance</h4>
+                                <p class="text-xs text-slate-500">Resume building & mock interview sessions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="rounded-2xl overflow-hidden shadow-xl border border-slate-200">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" alt="Students in computer lab classroom" class="w-full h-80 sm:h-96 object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filterable Course Offerings Grid -->
+    <section id="courses" class="py-16 md:py-24 bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-xs font-bold uppercase tracking-wider text-brand-600 mb-2">Complete Curriculum</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-slate-900">Explore Our Offline Courses in Tumkur</p>
+                <p class="text-slate-600 mt-3">From foundation literacy to advanced AI engineering & vendor certifications. Select a category below to filter.</p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-10">
+                <button onclick="filterCourses('all')" class="course-filter-btn px-4 py-2 rounded-xl text-sm font-semibold transition-all bg-brand-600 text-white shadow-md" data-category="all">
+                    All Programs
+                </button>
+                <button onclick="filterCourses('ai-cyber')" class="course-filter-btn px-4 py-2 rounded-xl text-sm font-semibold transition-all bg-slate-100 text-slate-700 hover:bg-slate-200" data-category="ai-cyber">
+                    <i class="fa-solid fa-brain mr-1.5 text-brand-500"></i> AI & Cybersecurity
+                </button>
+                <button onclick="filterCourses('vendors')" class="course-filter-btn px-4 py-2 rounded-xl text-sm font-semibold transition-all bg-slate-100 text-slate-700 hover:bg-slate-200" data-category="vendors">
+                    <i class="fa-solid fa-certificate mr-1.5 text-amber-500"></i> Global Certifications
+                </button>
+                <button onclick="filterCourses('marketing-bi')" class="course-filter-btn px-4 py-2 rounded-xl text-sm font-semibold transition-all bg-slate-100 text-slate-700 hover:bg-slate-200" data-category="marketing-bi">
+                    <i class="fa-solid fa-chart-line mr-1.5 text-emerald-500"></i> Marketing & BI
+                </button>
+                <button onclick="filterCourses('educators')" class="course-filter-btn px-4 py-2 rounded-xl text-sm font-semibold transition-all bg-slate-100 text-slate-700 hover:bg-slate-200" data-category="educators">
+                    <i class="fa-solid fa-chalkboard-user mr-1.5 text-purple-500"></i> Teacher Trainings
+                </button>
+                <button onclick="filterCourses('core')" class="course-filter-btn px-4 py-2 rounded-xl text-sm font-semibold transition-all bg-slate-100 text-slate-700 hover:bg-slate-200" data-category="core">
+                    <i class="fa-solid fa-code mr-1.5 text-blue-500"></i> Core Computing & Software
+                </button>
+            </div>
+
+            <!-- Courses Card Grid -->
+            <div id="courseGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Course 1: AI & Data Science -->
+                <div class="course-card bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="ai-cyber">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="w-12 h-12 bg-sky-100 text-brand-600 rounded-xl flex items-center justify-center text-xl font-bold">
+                                <i class="fa-solid fa-robot"></i>
+                            </span>
+                            <span class="text-xs font-bold bg-sky-100 text-sky-800 px-3 py-1 rounded-full">3 Months</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Applied AI & Machine Learning</h3>
+                        <p class="text-sm text-slate-600 mb-4">Hands-on offline training in Generative AI, Python for Data Science, Prompt Engineering, and ChatGPT API integrations.</p>
+                        <div class="space-y-2 border-t border-slate-200 pt-4 text-xs text-slate-700">
+                            <div class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i> Python, PyTorch, OpenAI APIs</div>
+                            <div class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i> Real-world AI project building</div>
+                            <div class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i> Certification: Academy AI Practitioner</div>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-white border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-xs text-slate-500 font-medium">Classroom + Lab Sessions</span>
+                        <button onclick="openEnrollWithCourse('Applied AI & Machine Learning')" class="text-sm font-bold text-brand-600 hover:text-brand-800 flex items-center">
+                            Apply Now &rarr;
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Course 2: Cybersecurity & Networking -->
+                <div class="course-card bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="ai-cyber">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="w-12 h-12 bg-red-100 text-red-600 rounded-xl flex items-center justify-center text-xl font-bold">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </span>
+                            <span class="text-xs font-bold bg-red-100 text-red-800 px-3 py-1 rounded-full">4 Months</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Ethical Hacking & Cybersecurity</h3>
+                        <p class="text-sm text-slate-600 mb-4">Learn network defense, ethical hacking concepts, vulnerability assessment, and live fire laboratory exercises in Tumkur.</p>
+                        <div class="space-y-2 border-t border-slate-200 pt-4 text-xs text-slate-700">
+                            <div class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i> Kali Linux, Wireshark, Metasploit</div>
+                            <div class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i> Simulated Cyber Range Practical Labs</div>
+                            <div class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i> Aligned with CEH & CompTIA Security+</div>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-white border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-xs text-slate-500 font-medium">Hands-on Security Lab</span>
+                        <button onclick="openEnrollWithCourse('Ethical Hacking & Cybersecurity')" class="text-sm font-bold text-brand-600 hover:text-brand-800 flex items-center">
+                            Apply Now &rarr;
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Course 3: Industry Certifications (Google, MS, Cisco, IBM) -->
+                <div class="course-card bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="vendors">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="w-12 h-12 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center text-xl font-bold">
+                                <i class="fa-solid fa-award"></i>
+                            </span>
+                            <span class="text-xs font-bold bg-amber-100 text-amber-800 px-3 py-1 rounded-full">2 - 3 Months</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Global Certification Suite</h3>
+                        <p class="text-sm text-slate-600 mb-4">Specialized bootcamps targeting exams from Microsoft (Azure/Office), Google Cloud, IBM Data, and Cisco CCNA.</p>
+                        <div class="space-y-2 border-t border-slate-200 pt-4 text-xs text-slate-700">
+                            <div class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i> Microsoft Azure & Office Specialist</div>
+                            <div class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i> Cisco CCNA Networking Essentials</div>
+                            <div class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i> IBM Data Analytics Certification</div>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-white border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-xs text-slate-500 font-medium">Official Exam Prep</span>
+                        <button onclick="openEnrollWithCourse('Global Vendor Certification Prep')" class="text-sm font-bold text-brand-600 hover:text-brand-800 flex items-center">
+                            Apply Now &rarr;
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Course 4: Graphic Design & Creative Suite (Adobe & Canva) -->
+                <div class="course-card bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="vendors">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="w-12 h-12 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center text-xl font-bold">
+                                <i class="fa-solid fa-palette"></i>
+                            </span>
+                            <span class="text-xs font-bold bg-purple-100 text-purple-800 px-3 py-1 rounded-full">2 Months</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Graphic Design: Adobe & Canva Pro</h3>
+                        <p class="text-sm text-slate-600 mb-4">Master professional UI/UX, video editing, poster creation, and branding collateral using Photoshop, Illustrator, Premiere & Canva.</p>
+                        <div class="space-y-2 border-t border-slate-200 pt-4 text-xs text-slate-700">
+                            <div class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i> Photoshop, Illustrator, Premiere Pro</div>
+                            <div class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i> Canva Pro for speed workflows</div>
+                            <div class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i> Personal design portfolio creation</div>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-white border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-xs text-slate-500 font-medium">Design Studio Lab</span>
+                        <button onclick="openEnrollWithCourse('Graphic Design: Adobe & Canva')" class="text-sm font-bold text-brand-600 hover:text-brand-800 flex items-center">
+                            Apply Now &rarr;
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Course 5: Digital Marketing & Growth -->
+                <div class="course-card bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="marketing-bi">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center text-xl font-bold">
+                                <i class="fa-solid fa-bullhorn"></i>
+                            </span>
+                            <span class="text-xs font-bold bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full">2.5 Months</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Digital Marketing & Growth Hacking</h3>
+                        <p class="text-sm text-slate-600 mb-4">Execute live Google Ads campaigns, Meta Ads, SEO strategies, email marketing, and social media growth for businesses.</p>
+                        <div class="space-y-2 border-t border-slate-200 pt-4 text-xs text-slate-700">
+                            <div class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i> Google Search Ads & Analytics 4</div>
+                            <div class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i> Social Media & Instagram Ads</div>
+                            <div class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i> Live ad budget practice</div>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-white border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-xs text-slate-500 font-medium">Agency-Style Practice</span>
+                        <button onclick="openEnrollWithCourse('Digital Marketing & Growth')" class="text-sm font-bold text-brand-600 hover:text-brand-800 flex items-center">
+                            Apply Now &rarr;
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Course 6: Business Intelligence & Data Analytics -->
+                <div class="course-card bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="marketing-bi">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="w-12 h-12 bg-teal-100 text-teal-600 rounded-xl flex items-center justify-center text-xl font-bold">
+                                <i class="fa-solid fa-chart-pie"></i>
+                            </span>
+                            <span class="text-xs font-bold bg-teal-100 text-teal-800 px-3 py-1 rounded-full">3 Months</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Business Intelligence & Power BI</h3>
+                        <p class="text-sm text-slate-600 mb-4">Transform raw business data into actionable dashboards using Advanced Excel, Power BI, Tableau, and SQL querying.</p>
+                        <div class="space-y-2 border-t border-slate-200 pt-4 text-xs text-slate-700">
+                            <div class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i> Power BI DAX & Interactive Reports</div>
+                            <div class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i> SQL Database Management</div>
+                            <div class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i> Advanced Financial & Sales Dashboards</div>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-white border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-xs text-slate-500 font-medium">Data Analyst Prep</span>
+                        <button onclick="openEnrollWithCourse('Business Intelligence & Power BI')" class="text-sm font-bold text-brand-600 hover:text-brand-800 flex items-center">
+                            Apply Now &rarr;
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Course 7: Teacher Training & Smart Classroom Pedagogy -->
+                <div class="course-card bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="educators">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center text-xl font-bold">
+                                <i class="fa-solid fa-chalkboard"></i>
+                            </span>
+                            <span class="text-xs font-bold bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full">1.5 Months</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Teacher Training: EdTech & ICT Tools</h3>
+                        <p class="text-sm text-slate-600 mb-4">Empowering school and college educators in Tumkur to integrate digital whiteboards, Google Classroom, AI tools & interactive media into teaching.</p>
+                        <div class="space-y-2 border-t border-slate-200 pt-4 text-xs text-slate-700">
+                            <div class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i> Google Workspace for Education</div>
+                            <div class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i> Smartboard & Multimedia Lesson Creation</div>
+                            <div class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i> AI tools for lesson planning</div>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-white border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-xs text-slate-500 font-medium">For Schools & Lecturers</span>
+                        <button onclick="openEnrollWithCourse('Teacher Training & ICT Pedagogy')" class="text-sm font-bold text-brand-600 hover:text-brand-800 flex items-center">
+                            Apply Now &rarr;
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Course 8: Full Stack Web Development -->
+                <div class="course-card bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="core">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center text-xl font-bold">
+                                <i class="fa-solid fa-code"></i>
+                            </span>
+                            <span class="text-xs font-bold bg-blue-100 text-blue-800 px-3 py-1 rounded-full">4 Months</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Full-Stack Web Development</h3>
+                        <p class="text-sm text-slate-600 mb-4">Master modern front-end & back-end programming using HTML5, CSS3, JavaScript, React, Node.js, and MongoDB with live coding.</p>
+                        <div class="space-y-2 border-t border-slate-200 pt-4 text-xs text-slate-700">
+                            <div class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i> React.js, Tailwind CSS, JavaScript</div>
+                            <div class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i> Express, Node.js & Database APIs</div>
+                            <div class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i> Build & deploy 5 real web apps</div>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-white border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-xs text-slate-500 font-medium">Coder's Intensive Lab</span>
+                        <button onclick="openEnrollWithCourse('Full-Stack Web Development')" class="text-sm font-bold text-brand-600 hover:text-brand-800 flex items-center">
+                            Apply Now &rarr;
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Course 9: Fundamental Computer & Office Automation -->
+                <div class="course-card bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="core">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="w-12 h-12 bg-slate-200 text-slate-700 rounded-xl flex items-center justify-center text-xl font-bold">
+                                <i class="fa-solid fa-computer"></i>
+                            </span>
+                            <span class="text-xs font-bold bg-slate-200 text-slate-800 px-3 py-1 rounded-full">1.5 Months</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Computer Fundamentals & Tally Prime</h3>
+                        <p class="text-sm text-slate-600 mb-4">Essential IT literacy for beginners: MS Office Suite (Word, Excel, PowerPoint), OS administration, typing speed & Tally Prime accounting.</p>
+                        <div class="space-y-2 border-t border-slate-200 pt-4 text-xs text-slate-700">
+                            <div class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i> MS Office Suite & Windows Admin</div>
+                            <div class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i> Tally Prime GST Accounting</div>
+                            <div class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i> Certificate in Office Automation</div>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-white border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-xs text-slate-500 font-medium">Beginner Friendly</span>
+                        <button onclick="openEnrollWithCourse('Computer Fundamentals & Tally')" class="text-sm font-bold text-brand-600 hover:text-brand-800 flex items-center">
+                            Apply Now &rarr;
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Classroom Features / Offline Experience Showcase -->
+    <section id="features" class="py-16 md:py-24 bg-gradient-to-b from-slate-900 to-brand-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="bg-brand-500/20 text-brand-100 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-brand-500/30">Tumkur Campus Advantage</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3">Built for High-Impact Offline Education</h2>
+                <p class="text-slate-300 mt-3">We provide all the infrastructure, hardware, and expert support so you focus solely on learning.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <div class="bg-slate-800/80 backdrop-blur-md p-8 rounded-2xl border border-slate-700 hover:border-brand-500/50 transition-all">
+                    <div class="w-14 h-14 bg-brand-500/20 text-brand-accent rounded-xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Air-Conditioned Tech Labs</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Work in high-speed, air-conditioned computer labs with dual monitors, high-speed fiber internet, and licensed professional software tools.
+                    </p>
+                </div>
+
+                <div class="bg-slate-800/80 backdrop-blur-md p-8 rounded-2xl border border-slate-700 hover:border-brand-500/50 transition-all">
+                    <div class="w-14 h-14 bg-brand-500/20 text-brand-accent rounded-xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-file-signature"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Live Hardcopy Study Kits</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Receive printed practice manuals, project workbooks, and quick reference cheatsheets designed specifically for our offline courses.
+                    </p>
+                </div>
+
+                <div class="bg-slate-800/80 backdrop-blur-md p-8 rounded-2xl border border-slate-700 hover:border-brand-500/50 transition-all">
+                    <div class="w-14 h-14 bg-brand-500/20 text-brand-accent rounded-xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-people-roof"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Small Batch Sizes</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        We cap our offline batches at 15-20 students maximum to ensure every student receives personal attention from the faculty mentor.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion Section -->
+    <section id="faq" class="py-16 md:py-24 bg-slate-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-brand-600 text-xs font-bold uppercase tracking-wider">Got Questions?</span>
+                <h2 class="text-3xl font-extrabold text-slate-900 mt-1">Frequently Asked Questions</h2>
+                <p class="text-slate-600 text-sm mt-2">Everything you need to know about joining Apex Computer Academy in Tumkur</p>
+            </div>
+
+            <div class="space-y-4">
+
+                <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button class="faq-toggle w-full text-left px-6 py-4 flex justify-between items-center font-bold text-slate-900 hover:bg-slate-50 transition-colors">
+                        <span>Where is SCE-ACADEMY located in Tumkur?</span>
+                        <i class="fa-solid fa-chevron-down text-brand-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                        Our main offline campus and Pearson VUE testing center is located at Sapthagiri Complex, Shantinagar, NH-4 Highway, Tumkur - 572106.
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button class="faq-toggle w-full text-left px-6 py-4 flex justify-between items-center font-bold text-slate-900 hover:bg-slate-50 transition-colors">
+                        <span>Can I write Pearson VUE online certification exams here?</span>
+                        <i class="fa-solid fa-chevron-down text-brand-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                        Yes! SCE-ACADEMY is an official Authorized Pearson VUE Testing Center. You can schedule and take exams for Microsoft, Cisco, CompTIA, AWS, Adobe, and more right here in Tumkur without traveling to Bangalore.
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button class="faq-toggle w-full text-left px-6 py-4 flex justify-between items-center font-bold text-slate-900 hover:bg-slate-50 transition-colors">
+                        <span>What are the qualifications of the faculty team?</span>
+                        <i class="fa-solid fa-chevron-down text-brand-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                        All our trainers come with Advanced Teaching Careers, holding an average of 10 to 15+ years of industry and academic mentoring experience. They provide hands-on, practical guidance in every lab session.
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button class="faq-toggle w-full text-left px-6 py-4 flex justify-between items-center font-bold text-slate-900 hover:bg-slate-50 transition-colors">
+                        <span>What are the offline batch timings available?</span>
+                        <i class="fa-solid fa-chevron-down text-brand-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                        We offer flexible timings to accommodate college students, working professionals, and educators:
+                        <ul class="list-disc pl-5 mt-2 space-y-1">
+                            <li>Morning Batch: 7:30 AM - 9:30 AM & 10:00 AM - 12:00 PM</li>
+                            <li>Afternoon Batch: 2:00 PM - 4:00 PM</li>
+                            <li>Evening Batch: 5:30 PM - 7:30 PM</li>
+                            <li>Weekend Special (Sat & Sun): 9:00 AM - 1:00 PM</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button class="faq-toggle w-full text-left px-6 py-4 flex justify-between items-center font-bold text-slate-900 hover:bg-slate-50 transition-colors">
+                        <span>Do I get official certificates upon completion?</span>
+                        <i class="fa-solid fa-chevron-down text-brand-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                        Yes! Upon successful course completion and clearing the practical lab exam, you will receive our ISO-certified Academy Completion Certificate. Additionally, we guide you through taking official certification exams for Google, Microsoft, IBM, Cisco, Adobe, and Canva.
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button class="faq-toggle w-full text-left px-6 py-4 flex justify-between items-center font-bold text-slate-900 hover:bg-slate-50 transition-colors">
+                        <span>Can I attend a trial demo class before paying the fees?</span>
+                        <i class="fa-solid fa-chevron-down text-brand-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                        Absolutely! We invite prospective students to register for a 2-day free demo session. Experience our classroom infrastructure, meet our faculty, and test out our practical teaching methodologies risk-free.
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button class="faq-toggle w-full text-left px-6 py-4 flex justify-between items-center font-bold text-slate-900 hover:bg-slate-50 transition-colors">
+                        <span>Are installment options available for course fees?</span>
+                        <i class="fa-solid fa-chevron-down text-brand-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                        Yes, we offer easy 2 to 3-stage monthly fee installment plans to ensure tech education remains affordable and accessible to everyone in Tumkur.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Contact Section -->
+    <section id="inquiry" class="py-16 md:py-24 bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Campus Address & Info -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-brand-600">Visit Our Tumkur Campus</span>
+                        <h2 class="text-3xl font-extrabold text-slate-900 mt-1">Get In Touch With Us</h2>
+                        <p class="text-slate-600 text-sm mt-2">Walk into our campus for counseling, course syllabus brochures, and immediate enrollment.</p>
+                    </div>
+
+                    <div class="space-y-4 pt-2">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 bg-brand-50 text-brand-600 rounded-lg flex items-center justify-center shrink-0 font-bold">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Campus Address</h4>
+                                <p class="text-slate-600 text-sm leading-relaxed">
+                                    SCE-ACADEMY, Sapthagiri Complex, Shantinagar, NH-4 Highway, Tumkur - 572106, Karnataka
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 bg-brand-50 text-brand-600 rounded-lg flex items-center justify-center shrink-0 font-bold">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Phone & WhatsApp</h4>
+                                <p class="text-slate-600 text-sm">+91 98765 43210 / +91 0816 2278900</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 bg-brand-50 text-brand-600 rounded-lg flex items-center justify-center shrink-0 font-bold">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Email Admissions & VUE Exam Center</h4>
+                                <p class="text-slate-600 text-sm">admissions@sceacademy-tumkur.in</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 bg-brand-50 text-brand-600 rounded-lg flex items-center justify-center shrink-0 font-bold">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Working Hours</h4>
+                                <p class="text-slate-600 text-sm">Monday – Saturday: 7:00 AM – 8:30 PM<br>Sunday: 9:00 AM – 1:30 PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Embedded Interactive Placeholder Map Component -->
+                    <div class="rounded-2xl overflow-hidden border border-slate-200 bg-slate-100 relative h-48 flex items-center justify-center text-center p-4">
+                        <div class="space-y-2">
+                            <i class="fa-solid fa-map-location-dot text-3xl text-brand-600"></i>
+                            <h5 class="font-bold text-slate-800 text-sm">Tumkur Campus Location</h5>
+                            <p class="text-xs text-slate-500">Sapthagiri Complex, Shantinagar, NH-4 Highway, Tumkur - 572106</p>
+                            <a href="https://maps.google.com" target="_blank" rel="noopener" class="inline-block text-xs font-bold text-brand-600 hover:underline">
+                                Open in Google Maps &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Inquiry Form -->
+                <div class="lg:col-span-7 bg-slate-50 p-8 rounded-2xl border border-slate-200 shadow-sm">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-2">Request Course Details & Free Demo</h3>
+                    <p class="text-slate-600 text-sm mb-6">Fill out the quick form below and our Tumkur counselor will contact you within 2 hours with fee details and syllabus outline.</p>
+
+                    <form id="contactForm" onsubmit="handleInquirySubmit(event)" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Full Name *</label>
+                                <input type="text" required placeholder="e.g. Ramesh Kumar" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:outline-none text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Phone / WhatsApp Number *</label>
+                                <input type="tel" required placeholder="e.g. 9876543210" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:outline-none text-sm">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Email Address</label>
+                                <input type="email" placeholder="name@example.com" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:outline-none text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Interested Course *</label>
+                                <select id="courseSelect" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:outline-none text-sm bg-white">
+                                    <option value="">-- Choose a Course --</option>
+                                    <option value="Applied AI & Machine Learning">Applied AI & Machine Learning</option>
+                                    <option value="Ethical Hacking & Cybersecurity">Ethical Hacking & Cybersecurity</option>
+                                    <option value="Global Vendor Certification Prep">Global Vendor Certification Prep (Google/MS/Cisco/IBM)</option>
+                                    <option value="Graphic Design: Adobe & Canva">Graphic Design: Adobe & Canva Pro</option>
+                                    <option value="Digital Marketing & Growth">Digital Marketing & Growth Hacking</option>
+                                    <option value="Business Intelligence & Power BI">Business Intelligence & Power BI</option>
+                                    <option value="Teacher Training & ICT Pedagogy">Teacher Training: EdTech & ICT</option>
+                                    <option value="Full-Stack Web Development">Full-Stack Web Development</option>
+                                    <option value="Computer Fundamentals & Tally">Computer Fundamentals & Tally Prime</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Preferred Batch Timing</label>
+                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                                <label class="flex items-center space-x-2 text-xs border border-slate-300 p-2.5 rounded-xl bg-white cursor-pointer hover:border-brand-500">
+                                    <input type="radio" name="timing" value="Morning" checked class="text-brand-600 focus:ring-brand-500">
+                                    <span>Morning</span>
+                                </label>
+                                <label class="flex items-center space-x-2 text-xs border border-slate-300 p-2.5 rounded-xl bg-white cursor-pointer hover:border-brand-500">
+                                    <input type="radio" name="timing" value="Afternoon" class="text-brand-600 focus:ring-brand-500">
+                                    <span>Afternoon</span>
+                                </label>
+                                <label class="flex items-center space-x-2 text-xs border border-slate-300 p-2.5 rounded-xl bg-white cursor-pointer hover:border-brand-500">
+                                    <input type="radio" name="timing" value="Evening" class="text-brand-600 focus:ring-brand-500">
+                                    <span>Evening</span>
+                                </label>
+                                <label class="flex items-center space-x-2 text-xs border border-slate-300 p-2.5 rounded-xl bg-white cursor-pointer hover:border-brand-500">
+                                    <input type="radio" name="timing" value="Weekend" class="text-brand-600 focus:ring-brand-500">
+                                    <span>Weekend</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Your Message or Questions</label>
+                            <textarea rows="3" placeholder="Tell us about your background or specific learning goals..." class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:outline-none text-sm"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 bg-brand-600 hover:bg-brand-700 text-white font-bold rounded-xl shadow-md transition-all text-sm uppercase tracking-wider">
+                            Submit Inquiry & Book Trial Slot &rarr;
+                        </button>
+                    </form>
+
+                    <!-- Feedback message container -->
+                    <div id="formSuccessMessage" class="hidden mt-4 p-4 bg-emerald-100 text-emerald-800 rounded-xl text-center text-sm font-semibold">
+                        <i class="fa-solid fa-circle-check mr-2"></i> Thank you! Your inquiry has been logged. Our Tumkur admissions counselor will call you shortly.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                
+                <div class="space-y-4 md:col-span-1">
+                    <div class="flex items-center space-x-2 text-white font-extrabold text-xl">
+                        <div class="w-8 h-8 bg-brand-500 rounded-lg flex items-center justify-center text-white">
+                            <i class="fa-solid fa-graduation-cap text-sm"></i>
+                        </div>
+                        <span>SCE-ACADEMY</span>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Tumkur’s top offline training institute & Pearson VUE Exam Center for job-ready technical skills, AI, Cybersecurity, Graphic Design, and Global Industry Certifications.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-sm mb-3">Quick Navigation</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#about" class="hover:text-white transition-colors">About Campus</a></li>
+                        <li><a href="#courses" class="hover:text-white transition-colors">Course Offerings</a></li>
+                        <li><a href="#vendors" class="hover:text-white transition-colors">Global Certifications</a></li>
+                        <li><a href="#features" class="hover:text-white transition-colors">Offline Facilities</a></li>
+                        <li><a href="#inquiry" class="hover:text-white transition-colors">Contact Tumkur Office</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-sm mb-3">Popular Courses</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#courses" class="hover:text-white transition-colors">AI & Machine Learning</a></li>
+                        <li><a href="#courses" class="hover:text-white transition-colors">Cybersecurity & Ethical Hacking</a></li>
+                        <li><a href="#courses" class="hover:text-white transition-colors">Adobe & Canva Graphic Design</a></li>
+                        <li><a href="#courses" class="hover:text-white transition-colors">Digital Marketing & Growth</a></li>
+                        <li><a href="#courses" class="hover:text-white transition-colors">Teacher Training & EdTech</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-sm mb-3">Connect With Us</h4>
+                    <p class="text-xs text-slate-400 mb-3">Follow us on social media for batch updates and free workshop alerts in Tumkur.</p>
+                    <div class="flex space-x-3 text-lg">
+                        <a href="#" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-brand-600 text-white flex items-center justify-center transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-brand-600 text-white flex items-center justify-center transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-brand-600 text-white flex items-center justify-center transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-brand-600 text-white flex items-center justify-center transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="border-t border-slate-800 pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500">
+                <p>&copy; 2026 SCE-ACADEMY Tumkur. Authorized Pearson VUE Test Center. All rights reserved.</p>
+                <div class="flex space-x-4 mt-4 sm:mt-0">
+                    <a href="#" class="hover:underline">Privacy Policy</a>
+                    <a href="#" class="hover:underline">Terms of Admission</a>
+                    <a href="#" class="hover:underline">Student Portal</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Admission / Booking Modal -->
+    <div id="enrollModal" class="fixed inset-0 z-50 hidden bg-slate-900/70 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 relative animate-in fade-in zoom-in duration-200">
+            <button onclick="closeModal('enrollModal')" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 p-2">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+            <div class="text-center mb-6">
+                <div class="w-12 h-12 bg-brand-100 text-brand-600 rounded-full flex items-center justify-center mx-auto mb-3 text-xl font-bold">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900">Enroll / Book Free Demo</h3>
+                <p class="text-xs text-slate-500 mt-1">Join Tumkur's leading offline computer academy today.</p>
+            </div>
+
+            <form onsubmit="handleModalSubmit(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Your Name</label>
+                    <input type="text" required placeholder="Full Name" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 text-sm">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Mobile Number</label>
+                    <input type="tel" required placeholder="10-digit Phone Number" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 text-sm">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Selected Course</label>
+                    <select id="modalCourseSelect" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 text-sm bg-white">
+                        <option value="General Inquiry">General Computer Courses</option>
+                        <option value="Applied AI & Machine Learning">Applied AI & Machine Learning</option>
+                        <option value="Ethical Hacking & Cybersecurity">Ethical Hacking & Cybersecurity</option>
+                        <option value="Global Vendor Certification Prep">Global Certifications (Google/MS/Cisco/IBM)</option>
+                        <option value="Graphic Design: Adobe & Canva">Graphic Design (Adobe & Canva)</option>
+                        <option value="Digital Marketing & Growth">Digital Marketing & Growth</option>
+                        <option value="Business Intelligence & Power BI">Business Intelligence & Power BI</option>
+                        <option value="Teacher Training & ICT Pedagogy">Teacher Training Programs</option>
+                    </select>
+                </div>
+                <button type="submit" class="w-full py-3 bg-brand-600 hover:bg-brand-700 text-white font-bold rounded-xl shadow-md text-sm">
+                    Confirm Registration Request
+                </button>
+            </form>
+
+            <div id="modalSuccess" class="hidden mt-4 p-3 bg-emerald-100 text-emerald-800 text-xs rounded-lg text-center font-medium">
+                Registration details received! Our Tumkur team will contact you.
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Interactions -->
+    <script>
+        // Toggle Mobile Menu
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Course Category Filter Functionality
+        function filterCourses(category) {
+            const cards = document.querySelectorAll('.course-card');
+            const buttons = document.querySelectorAll('.course-filter-btn');
+
+            // Update Active Button Styling
+            buttons.forEach(btn => {
+                if (btn.getAttribute('data-category') === category) {
+                    btn.className = 'course-filter-btn px-4 py-2 rounded-xl text-sm font-semibold transition-all bg-brand-600 text-white shadow-md';
+                } else {
+                    btn.className = 'course-filter-btn px-4 py-2 rounded-xl text-sm font-semibold transition-all bg-slate-100 text-slate-700 hover:bg-slate-200';
+                }
+            });
+
+            // Show/Hide Course Cards
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+        }
+
+        // FAQ Accordion Toggle
+        document.querySelectorAll('.faq-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('i');
+
+                // Toggle visibility
+                content.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+
+        // Modal Open / Close Logic
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.remove('hidden');
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.add('hidden');
+        }
+
+        function openEnrollWithCourse(courseName) {
+            const courseSelect = document.getElementById('courseSelect');
+            const modalCourseSelect = document.getElementById('modalCourseSelect');
+            if (courseSelect) courseSelect.value = courseName;
+            if (modalCourseSelect) modalCourseSelect.value = courseName;
+            openModal('enrollModal');
+        }
+
+        // Contact & Inquiry Form Handlers
+        function handleInquirySubmit(event) {
+            event.preventDefault();
+            const msg = document.getElementById('formSuccessMessage');
+            msg.classList.remove('hidden');
+            event.target.reset();
+            setTimeout(() => {
+                msg.classList.add('hidden');
+            }, 6000);
+        }
+
+        function handleModalSubmit(event) {
+            event.preventDefault();
+            const msg = document.getElementById('modalSuccess');
+            msg.classList.remove('hidden');
+            setTimeout(() => {
+                msg.classList.add('hidden');
+                closeModal('enrollModal');
+                event.target.reset();
+            }, 2500);
+        }
+    </script>
+</body>
+</html>
