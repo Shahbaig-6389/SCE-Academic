@@ -2,7 +2,7 @@
 
 # [Website](https://sites.google.com/view/sceacademy-in/full-page-embed)
 
-
+[web](index.html)
 
 <img src="https://github.com/SCEA-Computer-Training-Academy/.github/blob/e1a0a52cff9764a8d3004ea0d4ec55c15a16bfa4/assests/images/001%20design.png" />
 
