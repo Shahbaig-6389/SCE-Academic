@@ -1,6 +1,6 @@
 # SCE-ACADEMY
 
-# [Website](https://shahbaig-6389.github.io/SCE-Academic/)
+# [Website](https://scea-computer-training-academy.github.io/sceacademic.in/)
 
 [web](index.html)
 
