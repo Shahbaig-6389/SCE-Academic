@@ -1,6 +1,6 @@
 # SCE-ACADEMY
 
-# [Website](https://sites.google.com/view/sceacademy-in/full-page-embed)
+# [Website](https://shahbaig-6389.github.io/SCE-Academic/)
 
 [web](index.html)
 
